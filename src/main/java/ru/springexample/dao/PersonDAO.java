@@ -35,7 +35,7 @@ public class PersonDAO {
     }
 
     public void update(int id, Person updatePerson) {
-        jdbcTemplate.update("UPDATE Person SET name=?, age=?, email=? WHERE id?", updatePerson.getName(),
+        jdbcTemplate.update("UPDATE Person SET first_name=?, age=?, email=? WHERE id=?", updatePerson.getName(),
                             updatePerson.getAge(), updatePerson.getEmail(), id);
     }
 
